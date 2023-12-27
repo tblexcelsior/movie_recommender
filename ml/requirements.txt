@@ -6,3 +6,4 @@ torch==2.1.1
 tensorflow-recommenders
 transformers
 scann
+mysql-connector-python

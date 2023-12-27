@@ -19,4 +19,6 @@
 <p>In ml/utils/connector.py, please replace hostname, username, password in line 5, 6, 7 with your MySQL server credentials</p>
 <p>Open a terminal and run <code>python ml/api/server.py</code></p>
 <p>Open another terminal and run <code>streamlit run demo/app.py</code></p>
-<p>Open http://localhost:8501 and start testing</p>
+<p>Open http://localhost:8501</p>
+<p>Start test by enter ID and Query</p>
+<p>For example: ID = 42, Query = Horror film with Zombies </p>
