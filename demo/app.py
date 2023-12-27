@@ -7,14 +7,11 @@ from ml.utils import connector
 import requests
 import json
 
-url = "http://172.21.84.71:8000/get-recommendation"
+url = "http://127.0.0.1:8000/get-recommendation"
 headers = {'Content-type': 'application/json'}
 
-hostname = 'localhost'
-username = 'tblex'
-password = '1'
-database_name = 'recommender'
-conn = connector.connect_to_db(hostname, username, password, database_name)
+
+conn = connector.connect_to_db()
 
 def display_info_form():
     userId = st.text_input("Enter your ID:")
@@ -49,6 +46,9 @@ def main():
                 display_recommendation("Recommendations", recommendation)
             with col2:
                 display_recommendation("Your Top Movies", top_movies)
+
+        else:
+            st.write("Your ID is not available")
         
 if __name__ == "__main__":
     main()

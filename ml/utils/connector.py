@@ -6,7 +6,8 @@ hostname = 'localhost'
 username = 'tblex'
 password = '1'
 database_name = 'recommender'
-def connect_to_db(hostname, username, password, database_name):
+
+def connect_to_db():
     try:
         # Connect to the MySQL server
         connection = mysql.connector.connect(

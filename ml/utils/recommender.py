@@ -19,11 +19,7 @@ class personalisedSearcher:
         self.tokenizer = AutoTokenizer.from_pretrained("sentence-transformers/all-MiniLM-L12-v2")
         self.recommender = keras.models.load_model('ml/model/CF')
 
-        hostname = 'localhost'
-        username = 'tblex'
-        password = '1'
-        database_name = 'recommender'
-        self.conn = connector.connect_to_db(hostname, username, password, database_name)
+        self.conn = connector.connect_to_db()
         
     def get_user_encodings(self):
         # user_ids = self.ratings["userId"].unique().tolist()

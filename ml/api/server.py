@@ -4,8 +4,10 @@ sys.path.insert(1, os.getcwd())
 from ml.utils.recommender import personalisedSearcher
 from ml.utils import connector
 from flask import Flask, request
+
 ps = personalisedSearcher()
 app = Flask(__name__)
+
 @app.route("/get-recommendation", methods=["GET", "POST"])
 def get_recommendation():
     if request.method == "POST":
